@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina&family=Orbitron&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Mina;  
+    padding: 20px 60px;
+}
+
+/* nav */
+nav > ul > li> a:hover{
+    color: tomato;
+    /* width: 40px;  */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 20px 90px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 10px 2px 5px grey;
+    background-color: thistle;
+    position: fixed;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    float: left;
+}
+.navItem{
+    display: inline;
+    margin-left: 55px;
+    font-family: 'Orbitron', sans-serif;
+}
+.navItem a{
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+/* nav ends */
+
+/* hero box */
+.hero-box{
+    background: url('/images/xapora\ model\ afro2.jpg') #000;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.hero-text{
+    margin-left: 200px;
+}
+.hero-text p{
+    font-size: 22px;
+}
+.hero-text h1{
+    font-size: 52px;
+    margin: 35px 0;
+}
+button{
+    padding: 15px 20px;
+    width: 170px;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    color: silver;
+}
+/* hero box ends */
+
+/* bottom box */
+.bottomBox{
+    padding: 20px 90px;
+}
+.cards{
+    height: 400px; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;  
+}
+.card1{
+    width: 500px;
+    margin-right: 20px;
+    background: url('/images/xapora\ model\ 1.jpg');
+    background-size: cover;
+}
+.cards p{
+    /* background-color: white; */
+    text-align: center;
+    color: white;
+    margin-top: 30%;
+    border-radius:10px;
+    /* box-shadow: 0 0 3px black;    */
+    opacity: 0.4; 
+    font-weight: 900;  
+    font-size: 60px;
+}
+.card2{
+    width: 500px;
+    margin-right: 20px;
+    background: url('/images/xapora\ bags.png');
+    background-size: cover;
+}
+.card2 p{
+  color: black; 
+}
+.card3{
+    width: 500px;
+    margin-right: 20px;
+    background: url('/images/xapora\ male.jpg');
+    background-size: cover;
+}
+/* bottom box ends */
+
+/* about page */
+.aboutus-body {
+    background-color: black;
+    color: white;
+}
+.ABOUT{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.CEO {
+    display: flex;
+    padding-top: 100px;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.CEO img{
+    width: 50%;
+}
+
+.ceo-info {
+    margin-left: 50px;
+}
+
+/* about page ends */
+
+/* footer */
+.footer {
+    text-align: center;
+    height: 70px;
+    padding: 20px 90px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+.footer a{
+    margin:20px;
+}
+
+/* footer ends */
