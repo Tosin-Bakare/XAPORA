@@ -7,13 +7,17 @@
 }
 body {
   font-family: Mina;
+  background-color: black;
+  color: white;
 }
 
 /* nav */
-nav > ul > li > a:hover {
+nav > ul > li > a:hover,
+nav .option:hover,
+.navItem .fa:hover {
   color: tomato;
-  /* width: 40px;  */
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -39,11 +43,15 @@ a {
   margin-left: 55px;
   font-family: "Orbitron", sans-serif;
 }
-.navItem a {
+.navItem a,
+.navItem .option,
+.navItem .fa {
   color: #000;
   text-decoration: none;
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
+  display: inline;
 }
 /* nav ends */
 
@@ -129,10 +137,6 @@ button:hover {
 /* bottom box ends */
 
 /* about page */
-.aboutus-body {
-  background-color: black;
-  color: white;
-}
 .ABOUT {
   text-align: center;
   padding-top: 100px;

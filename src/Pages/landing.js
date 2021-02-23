@@ -7,8 +7,8 @@ function Landing() {
     return (
     <>
         {/* hero box  */}
-        <div class="hero-box">
-            <div class="hero-text">
+        <div className="hero-box">
+            <div className="hero-text">
                 <p>SPRING/SUMMER COLLECTION 2020</p>
                 <h1>GET UP TO 30% OFF <br /> CHRISTMAS ARRIVALS.</h1>
                 <Link to="/shop">
@@ -19,30 +19,30 @@ function Landing() {
         {/* hero box ends */}
 
         {/* bottom box */}
-        {/* <div class="bottomBox">
-            <div class="cards">
-                <div class="card1">
+        {/* <div className="bottomBox">
+            <div className="cards">
+                <div className="card1">
                     <p>WOMEN'S</p>
                 </div>
-                <div class="card2">
+                <div className="card2">
                     <p>ACCESSORIES</p>
                 </div>
-                <div class="card3">
+                <div className="card3">
                     <p>MEN'S</p>
                 </div>
             </div>
         </div> */}
         {/* bottom box ends */}
-        <div class="image-gallery" />
+        <div className="image-gallery" />
         <div className="shop">
         <Directory />
         </div>
-        <div class="footer">
-            <Link to="mailto:xapora.co@gmail.com"><i class="fa fa-envelope"></i></Link>
-            <Link to="#"><i class="fa fa-facebook-f"></i></Link>
-            <Link to="#"><i class="fa fa-twitter"></i></Link>
-            <Link to="#"><i class="fa fa-instagram"></i></Link>
-            <Link to="#"><i class="fa fa-whatsapp"></i></Link>
+        <div className="footer">
+            <Link to="mailto:xapora.co@gmail.com"><i className="fa fa-envelope"></i></Link>
+            <Link to="#"><i className="fa fa-facebook-f"></i></Link>
+            <Link to="#"><i className="fa fa-twitter"></i></Link>
+            <Link to="#"><i className="fa fa-instagram"></i></Link>
+            <Link to="#"><i className="fa fa-whatsapp"></i></Link>
         </div>
     </>
     )
