@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { auth } from "../../firebase/firebase.utils";
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import XaporaLogo from "../../assets/images/XAPORA TRANSPERENT 3.png";
 
 import "./header.styles.scss";
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   <nav>
     <div className="logo">
       <Link to="/">
@@ -38,16 +41,15 @@ const Header = ({ currentUser }) => (
           </Link>
         </li>
       )}
-      <li className="navItem">
-        <Link to="/admin">
-          <i className="fa fa-user"></i>
-        </Link>
-      </li>
-      <li className="navItem">
-        <i className="fa fa-shopping-cart"></i>
-      </li>
+      <CartIcon />
     </ul>
+    {hidden ? null : <CartDropdown />}
   </nav>
 );
 
-export default Header;
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
+});
+
+export default connect(mapStateToProps)(Header);
