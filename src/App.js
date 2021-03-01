@@ -6,10 +6,10 @@ import { createStructuredSelector } from 'reselect';
 
 import Landing from './Pages/landing';
 import Aboutus from './Pages/aboutus';
-import HomePage from './Pages/homepage.component';
+import HomePage from './components/homepage/homepage.component';
 import ShopPage from './Pages/shop/shop.component';
 import Header from './components/header/header.component';
-import SignInAndSignUpPage from './components/sign-in-and-sign-up/sign-in-sign-up.component';
+import SignInAndSignUpPage from './Pages/sign-in-and-sign-up/sign-in-sign-up.component';
 import CheckoutPage from './Pages/checkout/checkout.component';
 import Error from './Pages/error';
 

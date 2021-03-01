@@ -4,13 +4,23 @@
     margin-bottom: 30px;
     padding: 150px 80px 20px;
 
+
 .title{
     font-size: 28px;
     margin-bottom: 25px;
 }
 
 .preview{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+
+    @media(min-width: 992px){
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    @media (min-width: 1200px){
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
   }
 }

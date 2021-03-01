@@ -10,6 +10,7 @@
     top: 90px;
     right: 40px;
     z-index: 5;
+    align-items: center;
 
     .empty-message{
       font-size: 18px;
@@ -49,6 +50,7 @@
       margin-top: auto;
       background-color: black;
       color: white;
+      min-width: fit-content;
 
       &:hover{
         background-color: #fff;

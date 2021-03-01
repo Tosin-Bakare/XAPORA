@@ -24,10 +24,12 @@ nav {
   height: 70px;
   padding: 20px 90px;
   border-bottom: 1px solid #ccc;
-  box-shadow: 10px 2px 5px grey;
+  box-shadow: 0px 20px 20px 20px black;
   background-color: thistle;
   position: fixed;
   width: 100%;
+  z-index: 100;
+  margin-bottom: 25px;
 }
 
 a {
@@ -80,14 +82,18 @@ a {
 }
 button {
   padding: 15px 20px;
-  width: 170px;
-  background-color: red;
-  color: #fff;
+  width: fit-content;
+  background-color: thistle;
+  font-family: "Mina";
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
 }
 button:hover {
-  color: silver;
+  background: transparent;
+  color: white;
 }
 /* hero box ends */
 
@@ -136,26 +142,29 @@ button:hover {
 }
 /* bottom box ends */
 
-/* about page */
+/* ABOUT PAGE */
 .ABOUT {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .CEO {
   display: flex;
   padding-top: 100px;
-  width: 80%;
+  width: 70%;
   max-width: 900px;
   margin: auto;
+  flex-direction: column;
 }
 
 .CEO img {
-  width: 50%;
+  width: 60%;
+  margin-top: 100px;
 }
 
 .ceo-info {
-  margin-left: 50px;
+  /* margin-left: 50px;
+  margin-top: 100px; */
 }
 
 /* about page ends */
