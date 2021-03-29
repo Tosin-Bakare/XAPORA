@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { createStructuredSelector } from 'reselect';
+import { createStructuredSelector } from "reselect";
 import { auth } from "../../firebase/firebase.utils";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
-import { selectCartHidden } from '../../redux/cart/cart.selectors';
-import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 import XaporaLogo from "../../assets/images/XAPORA TRANSPERENT 3.png";
 
 import "./header.styles.scss";
@@ -47,12 +47,19 @@ const Header = ({ currentUser, hidden }) => (
       <CartIcon />
     </ul>
     {hidden ? null : <CartDropdown />}
+
+    <Link
+      className="harmburgericon"
+      //onClick={}
+    >
+      <i className="fa fa-bars"></i>
+    </Link>
   </nav>
 );
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  hidden: selectCartHidden
+  hidden: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);

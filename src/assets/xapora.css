@@ -11,7 +11,7 @@ body {
   color: white;
 }
 
-/* nav */
+/*------------------------------------ nav-----------------*/
 nav > ul > li > a:hover,
 nav .option:hover,
 .navItem .fa:hover {
@@ -24,7 +24,7 @@ nav {
   height: 70px;
   padding: 20px 90px;
   border-bottom: 1px solid #ccc;
-  box-shadow: 0px 20px 20px 20px black;
+  /* box-shadow: 0px 20px 20px 20px black; */
   background-color: thistle;
   position: fixed;
   width: 100%;
@@ -55,7 +55,30 @@ a {
   cursor: pointer;
   display: inline;
 }
-/* nav ends */
+
+/* Style the hamburger menu */
+/* .navItem a.harmburgericon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: black;
+} */
+
+/* Add a grey background color on mouse-over */
+/* .navItem a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+/*----------------------------nav-------------------------ends */
 
 /* hero box */
 .hero-box {
@@ -168,18 +191,3 @@ button:hover {
 }
 
 /* about page ends */
-
-/* footer */
-.footer {
-  text-align: center;
-  height: 70px;
-  padding: 20px 90px;
-  background-color: black;
-  color: white;
-  font-size: 30px;
-}
-.footer a {
-  margin: 20px;
-}
-
-/* footer ends */
