@@ -11,11 +11,12 @@ import XaporaLogo from "../../assets/images/XAPORA TRANSPERENT 3.png";
 
 import "./header.styles.scss";
 
+
 const Header = ({ currentUser, hidden }) => (
   <nav>
     <div className="logo">
       <Link to="/">
-        <img src={XaporaLogo} width="200px" alt="Xapora logo" />
+        <img src={XaporaLogo} width="150px" alt="Xapora logo" />
       </Link>
     </div>
     <ul>
@@ -48,10 +49,7 @@ const Header = ({ currentUser, hidden }) => (
     </ul>
     {hidden ? null : <CartDropdown />}
 
-    <Link
-      className="harmburgericon"
-      //onClick={}
-    >
+    <Link>
       <i className="fa fa-bars"></i>
     </Link>
   </nav>

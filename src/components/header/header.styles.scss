@@ -2,4 +2,16 @@
   color: black;
   font-size: large;
   padding-top: 10px;
+  margin-bottom: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+.fa-bars{
+  display:block ;
+}
+.navItem{
+  display: none;
+}
 }
