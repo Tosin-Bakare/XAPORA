@@ -1,25 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import "./footer.styles.css";
 
 const Footer = () => (
   <div className="footer">
-    <Link to="mailto:xapora.co@gmail.com">
+    <a target="_blank" href="mailto:xapora.co@gmail.com">
       <i className="fa fa-envelope"></i>
-    </Link>
-    <Link to="#">
+    </a>
+    <a  target="_blank" href="https://facebook.com/">
       <i className="fa fa-facebook-f"></i>
-    </Link>
-    <Link to="#">
+    </a>
+    <a  target="_blank" href="https://twitter.com/XaporaF">
       <i className="fa fa-twitter"></i>
-    </Link>
-    <Link to="#">
+    </a>
+    <a  target="_blank" href="#">
       <i className="fa fa-instagram"></i>
-    </Link>
-    <Link to="#">
+    </a>
+    <a  target="_blank" href="https://wa.me/message/GMMCIYRPIEG4I1">
       <i className="fa fa-whatsapp"></i>
-    </Link>
+    </a>
   </div>
 );
 

@@ -62,8 +62,8 @@ class App extends React.Component {
               this.props.currentUser ? (
                 <Redirect to='/' />
               ) : (
-                  <SignInAndSignUpPage />
-                )
+                <SignInAndSignUpPage />
+              )
             }
           />
           <Route exact component={Error} />

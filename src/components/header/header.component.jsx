@@ -32,7 +32,7 @@ const Header = ({ currentUser, hidden }) => (
       <li className="navItem">
         <Link to="/contact">CONTACT</Link>
       </li>
-      {currentUser ? (
+      {/* <>{currentUser ? (
         <li className="navItem">
           <div className="option" onClick={() => auth.signOut()}>
             SIGN OUT
@@ -44,8 +44,10 @@ const Header = ({ currentUser, hidden }) => (
             SIGN IN
           </Link>
         </li>
-      )}
-      <CartIcon />
+      )}</> */}
+      <li className="navItem">
+           <CartIcon  />
+      </li>
     </ul>
     {hidden ? null : <CartDropdown />}
 
