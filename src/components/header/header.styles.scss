@@ -12,7 +12,10 @@
   display: none;
   cursor: pointer;
 }
-
+.desktop {
+  display: flex;
+  justify-content: center;
+}
 @media only screen and (max-width: 768px) {
   .fa-bars,
   .fa-close {

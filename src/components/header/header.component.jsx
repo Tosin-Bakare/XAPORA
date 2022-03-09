@@ -20,10 +20,10 @@ const menu = [
     title: "ABOUT US",
     link: "/aboutus",
   },
-  {
-    title: "BLOG",
-    link: "/blog",
-  },
+  // {
+  //   title: "BLOG",
+  //   link: "/blog",
+  // },
   {
     title: "CONTACT",
     link: "/contact",
