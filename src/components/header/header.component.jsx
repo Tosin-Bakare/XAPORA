@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -11,28 +11,43 @@ import XaporaLogo from "../../assets/images/XAPORA TRANSPERENT 3.png";
 
 import "./header.styles.scss";
 
+const menu = [
+  {
+    title: "SHOP",
+    link: "/shop",
+  },
+  {
+    title: "ABOUT US",
+    link: "/aboutus",
+  },
+  {
+    title: "BLOG",
+    link: "/blog",
+  },
+  {
+    title: "CONTACT",
+    link: "/contact",
+  },
+];
+const Header = ({ currentUser, hidden }) => {
+  const [menuToggle, setMenuToggle] = useState(false);
 
-const Header = ({ currentUser, hidden }) => (
-  <nav>
-    <div className="logo">
-      <Link to="/">
-        <img src={XaporaLogo} width="150px" alt="Xapora logo" />
-      </Link>
-    </div>
-    <ul>
-      <li className="navItem">
-        <Link to="/shop">SHOP</Link>
-      </li>
-      <li className="navItem">
-        <Link to="/aboutus">ABOUT US</Link>
-      </li>
-      <li className="navItem">
-        <Link to="/blog">BLOG</Link>
-      </li>
-      <li className="navItem">
-        <Link to="/contact">CONTACT</Link>
-      </li>
-      {/* <>{currentUser ? (
+  return (
+    <nav className={menuToggle && "navOpen"}>
+      <div className="navflex">
+        <div className="logo">
+          <Link to="/">
+            <img src={XaporaLogo} width="150px" alt="Xapora logo" />
+          </Link>
+        </div>
+        <ul className="desktop">
+          {menu.map((m, i) => (
+            <li key={i} className="navItem">
+              <Link to={m.link}>{m.title}</Link>
+            </li>
+          ))}
+
+          {/* <>{currentUser ? (
         <li className="navItem">
           <div className="option" onClick={() => auth.signOut()}>
             SIGN OUT
@@ -45,17 +60,32 @@ const Header = ({ currentUser, hidden }) => (
           </Link>
         </li>
       )}</> */}
-      <li className="navItem">
-           <CartIcon  />
-      </li>
-    </ul>
-    {hidden ? null : <CartDropdown />}
-
-    <Link>
-      <i className="fa fa-bars"></i>
-    </Link>
-  </nav>
-);
+          <li className="navItem">
+            <CartIcon />
+          </li>
+        </ul>
+        {hidden ? null : <CartDropdown />}
+        <span style={{ zIndex: 1000 }}>
+          {!menuToggle && (
+            <i onClick={() => setMenuToggle(true)} className="fa fa-bars"></i>
+          )}
+          {menuToggle && (
+            <i onClick={() => setMenuToggle(false)} className="fa fa-close"></i>
+          )}
+        </span>{" "}
+      </div>
+      <div style={{ display: menuToggle ? "block" : "none" }}>
+        <ul className="mobile">
+          {menu.map((m, i) => (
+            <li key={i} onClick={() => setMenuToggle(!menuToggle)}>
+              <Link to={m.link}>{m.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,

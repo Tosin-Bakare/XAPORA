@@ -1,4 +1,10 @@
-.fa-bars {
+*,
+*::before,
+*::after {
+  //  transition: all 5s ease-in-out;
+}
+.fa-bars,
+.fa-close {
   color: black;
   font-size: large;
   padding-top: 10px;
@@ -7,11 +13,41 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-.fa-bars{
-  display:block ;
-}
-.navItem{
-  display: none;
-}
+@media only screen and (max-width: 768px) {
+  .fa-bars,
+  .fa-close {
+    display: block;
+  }
+  .navflex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 30px;
+      line-height: 4;
+      font-weight: 700;
+    }
+    li {
+      list-style: none;
+    }
+  }
+  nav {
+    padding: 20px;
+    bottom: 90%;
+  }
+  .navOpen {
+    height: unset;
+    bottom: 0;
+    top: 0;
+    transition: bottom 0.5s ease-in-out;
+    // padding: 20px;
+  }
 }
