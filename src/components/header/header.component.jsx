@@ -46,6 +46,7 @@ const Header = ({ currentUser, hidden }) => {
               <Link to={m.link}>{m.title}</Link>
             </li>
           ))}
+          <CartIcon />
         </ul>
         {/* <>{currentUser ? (
         <li className="navItem">
@@ -60,9 +61,9 @@ const Header = ({ currentUser, hidden }) => {
           </Link>
         </li>
       )}</> */}
-        <li className="navItem">
+        <span className="mobile">
           <CartIcon />
-        </li>
+        </span>
         {hidden ? null : <CartDropdown />}
         <span style={{ zIndex: 1000 }}>
           {!menuToggle && (

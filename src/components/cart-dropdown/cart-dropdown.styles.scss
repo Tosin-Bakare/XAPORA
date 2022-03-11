@@ -1,62 +1,75 @@
 .cart-dropdown {
-    position: absolute;
-    width: 250px;
-    height: 340px;
+  position: absolute;
+  width: 250px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+  top: 90px;
+  right: 40px;
+  z-index: 5;
+  align-items: center;
+
+  .empty-message {
+    font-size: 18px;
+    margin: 50px auto;
+    color: black;
+  }
+
+  .cart-items {
+    height: 240px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border: 1px solid black;
-    background-color: white;
-    top: 90px;
-    right: 40px;
-    z-index: 5;
-    align-items: center;
+    overflow-y: scroll;
+    margin-bottom: 15px;
 
-    .empty-message{
-      font-size: 18px;
-      margin: 50px auto;
-      color:black;
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      width: 7px;
+      border-radius: 15px;
+      transition: all 5s;
     }
-  
-    .cart-items {
-      height: 240px;
-      display: flex;
-      flex-direction: column;
-      overflow-y: scroll;
-      margin-bottom: 15px;
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      cursor: pointer;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 15px;
+    }
+    &:hover {
+      transition: all 5s;
+      &::-webkit-scrollbar-thumb {
+        transition: all 5s;
+        background: rgb(145, 144, 144);
+      }
+    }
 
-      &::-webkit-scrollbar,
-      &::-webkit-scrollbar-thumb {
-        width: 7px;
-        border-radius: 15px;
-        transition: all 5s;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: transparent;
-        cursor: pointer;
-      }
-      &::-webkit-scrollbar-track {
-        border-radius: 15px;
-      }
-      &:hover {
-        transition: all 5s;
-        &::-webkit-scrollbar-thumb {
-          transition: all 5s;
-          background: rgb(145, 144, 144);
-        }
-    }
-  
     button {
       margin-top: auto;
       background-color: black;
       color: white;
       min-width: fit-content;
 
-      &:hover{
+      &:hover {
         background-color: #fff;
-        color:black;
-    }
+        color: black;
+      }
     }
   }
+}
+@media only screen and (max-width: 768px) {
+  .cart-dropdown {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    top: 70px;
+    left: 0;
+    right: 0;
   }
-  
+  .cart-items,
+  .cart-dropdown {
+    height: unset !important;
+  }
+}

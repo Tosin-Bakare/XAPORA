@@ -4,7 +4,7 @@ import "./contact.styles.scss";
 
 const ContactPage = () => {
   return (
-    <div className="sign-in-and-sign-up">
+    <div className="">
       <h1>I'm tired</h1>
     </div>
   );

@@ -16,6 +16,9 @@
   display: flex;
   justify-content: center;
 }
+.mobile {
+  display: none;
+}
 @media only screen and (max-width: 768px) {
   .fa-bars,
   .fa-close {
