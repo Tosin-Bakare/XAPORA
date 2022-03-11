@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 
 import Landing from './Pages/landing';
 import Aboutus from './Pages/aboutus';
+import ContactPage from './Pages/contact/contact.component';
 import HomePage from './components/homepage/homepage.component';
 import ShopPage from './Pages/shop/shop.component';
 import Header from './components/header/header.component';
@@ -52,6 +53,7 @@ class App extends React.Component {
         <Switch>
           <Route path='/' exact component={Landing} />
           <Route path='/aboutus' exact component={Aboutus} />
+          <Route path='/contact' exact component={ContactPage} />
           <Route path='/homepage' exact component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/checkout' component={CheckoutPage} />

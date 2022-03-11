@@ -46,8 +46,8 @@ const Header = ({ currentUser, hidden }) => {
               <Link to={m.link}>{m.title}</Link>
             </li>
           ))}
-
-          {/* <>{currentUser ? (
+        </ul>
+        {/* <>{currentUser ? (
         <li className="navItem">
           <div className="option" onClick={() => auth.signOut()}>
             SIGN OUT
@@ -60,10 +60,9 @@ const Header = ({ currentUser, hidden }) => {
           </Link>
         </li>
       )}</> */}
-          <li className="navItem">
-            <CartIcon />
-          </li>
-        </ul>
+        <li className="navItem">
+          <CartIcon />
+        </li>
         {hidden ? null : <CartDropdown />}
         <span style={{ zIndex: 1000 }}>
           {!menuToggle && (

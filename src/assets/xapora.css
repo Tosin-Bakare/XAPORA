@@ -90,7 +90,7 @@ a {
   align-items: flex-start;
 }
 .hero-text {
-  margin-left: 200px;
+  padding: 90px;
 }
 .hero-text p {
   font-size: 22px;
@@ -116,41 +116,30 @@ button:hover {
   color: white;
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 768px) {
+  /* For all mobile phones: */
  .hero-box{
    background: black;
  }
-  .hero-text{
-    margin-left: 100px;
-    /* align-items: center; */
-  }
-  .hero-text h1{
-    font-size: 39px;
-  }
+   .hero-text {
+     align-items: center;
+   }
 }
-@media only screen and (min-width: 671px) {
-  .hero-box {
-    /* background: url(../assets/images/xapora-model-afro2.jpg); */
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
-    background-attachment: fixed;
-    height: 100vh;
-  }
-
-  .hero-text {
-    /* margin-left: 100px; */
-    align-items: center;
-  }
-  .hero-text p{
+@media only screen and (max-width: 600px){
+   .hero-text {
+     align-items: center;
+   }
+  .hero-text p {
     font-size: 18px;
   }
   .hero-text h1 {
-    font-size: 30px;
+    font-size: 38px;
+    line-height: 1;
   }
 }
-/* hero box ends */
+/* hero box ends -------------------------------------------------------------------------------------- */
 
-/* bottom box */
+/* bottom box ----------------------------------------------------------------------------------------------*/
 .bottomBox {
   padding: 20px 90px;
 }
@@ -193,9 +182,9 @@ button:hover {
   background: url("../assets/images/xapora\ male.jpg");
   background-size: cover;
 }
-/* bottom box ends */
+/* bottom box ends ------------------------------------------------------------------------- */
 
-/* ABOUT PAGE */
+/* ABOUT PAGE --------------------------------------------------------------- */
 .ABOUT {
   text-align: center;
   padding-top: 150px;
@@ -220,4 +209,4 @@ button:hover {
   margin-top: 100px; */
 }
 
-/* about page ends */
+/* about page ends -------------------------------------------------------------------------*/
